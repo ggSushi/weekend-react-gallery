@@ -20,7 +20,15 @@ function GalleryList({gallery, setGalleryList}) {
 
   return(
     <>
-    {JSON.stringify(gallery)}
+    {/* {JSON.stringify(gallery)} */}
+      {
+        gallery.map((photo) => (
+          <GalleryItem 
+            key={photo.id}
+            photo={photo}
+          />
+        ))
+      }
     </>
   )
 }

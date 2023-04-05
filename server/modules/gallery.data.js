@@ -19,7 +19,7 @@ const galleryItems = [
     },
     { 
         id: 4, 
-        path: 'images/pokemon and lego.jpeg', 
+        path: 'images/pokemon-and-lego.jpeg', 
         description: 'Photo of Combee Mega Brands figure', 
         likes: 0 
     },
