@@ -1,11 +1,12 @@
 import react from 'react';
 import {useState} from 'react';
 import {useParams} from 'react-router-dom';
+import axios from 'axios';
 
 function GalleryItem({photo}) {
 
   let string = '';
-
+  const { id } = useParams();
   const [picStatus, setNewStatus] = useState(true);
   const [likes, setLikes] = useState(photo.likes)
 
@@ -20,8 +21,15 @@ function GalleryItem({photo}) {
     }
   };
 
+  //! Something is wrong here. I can't quite figure it out.
   const increaseLikes = () => {
-    setLikes(likes + 1)
+    console.log(photo.id)
+    axios.put(`/likes/${photo.id}`).then((response) => {
+      console.log(`Sanity check`,response);
+    }).catch((error) => {
+      console.log(`Error in PUT ${error}`);
+      alert(`Something went wrong`)
+    })
   }
 
   return(
@@ -30,12 +38,14 @@ function GalleryItem({photo}) {
         {
           picStatus === true ? (
             <img 
+            key={id}
             onClick={togglePic}
             className="gallery-pics" 
             src={photo.path}    
             />
           ) : (
             <div 
+            key={id}
             onClick={togglePic}
             className="gallery-pics" 
             alt={photo.description}
