@@ -28,6 +28,7 @@ function GalleryList({gallery, setGalleryList}) {
           <GalleryItem 
             key={photo.id}
             photo={photo}
+            getGalleryList={getGalleryList}
           />
         ))
       }

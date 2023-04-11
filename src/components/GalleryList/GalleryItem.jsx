@@ -3,7 +3,7 @@ import {useState} from 'react';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
 
-function GalleryItem({photo}) {
+function GalleryItem({photo, getGalleryList}) {
 
   let string = '';
   const { id } = useParams();
@@ -24,7 +24,7 @@ function GalleryItem({photo}) {
   //! Something is wrong here. I can't quite figure it out.
   const increaseLikes = () => {
     console.log(photo.id)
-    axios.put(`/likes/${photo.id}`).then((response) => {
+    axios.put(`/gallery/like/${photo.id}`).then((response) => {
       console.log(`Sanity check`,response);
     }).catch((error) => {
       console.log(`Error in PUT ${error}`);
@@ -56,7 +56,7 @@ function GalleryItem({photo}) {
         <br/>
         <button onClick={increaseLikes}>Love it!</button>
         <br/>
-        {likes}
+        {photo.likes}
       </div>
     </>
   )
