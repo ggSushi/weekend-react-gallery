@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {useState} from 'react';
 import Gallery from '../GalleryList/GalleryList.jsx'
+import Stack from '@mui/material/Stack';
 
 function App() {
 
@@ -13,11 +14,19 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
-        <Gallery 
-          gallery={gallery}
-          setGalleryList={setGalleryList}
-        />
+        {/* <img src="images/goat_small.jpg"/> */}
+        <Stack 
+        className="gallery-stack"
+        direction="row" 
+        justifyContent="space-around"
+        flexWrap="wrap"
+        sx={{ width: 500}}
+        >
+          <Gallery 
+            gallery={gallery}
+            setGalleryList={setGalleryList}
+          />
+        </Stack>
       </div>
     );
 }

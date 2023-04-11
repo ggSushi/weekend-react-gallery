@@ -14,5 +14,13 @@
 }
 
 .gallery-pics {
+  margin: auto;
   width: 150px;
+  max-width: 150px;
+  height: 150px;
+  min-height: 150px;
+}
+
+.gallery-stack {
+  margin: auto;
 }
