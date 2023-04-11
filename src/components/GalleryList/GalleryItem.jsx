@@ -21,7 +21,6 @@ function GalleryItem({photo, getGalleryList}) {
     }
   };
 
-  //! Something is wrong here. I can't quite figure it out.
   const increaseLikes = () => {
     console.log(photo.id)
     axios.put(`/gallery/like/${photo.id}`).then((response) => {
