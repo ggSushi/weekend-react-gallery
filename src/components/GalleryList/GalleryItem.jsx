@@ -1,4 +1,4 @@
-import react from 'react';
+
 import {useState} from 'react';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
@@ -8,7 +8,6 @@ function GalleryItem({photo, getGalleryList}) {
   let string = '';
   const { id } = useParams();
   const [picStatus, setNewStatus] = useState(true);
-  const [likes, setLikes] = useState(photo.likes)
 
   const togglePic = () => {
     setNewStatus(!picStatus);

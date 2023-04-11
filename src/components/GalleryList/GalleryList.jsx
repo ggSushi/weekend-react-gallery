@@ -1,8 +1,7 @@
-import react from 'react';
+
 import GalleryItem from './GalleryItem';
 import axios from 'axios';
-import {useEffect, useState} from 'react';
-import { useParams } from 'react-router-dom';
+import {useEffect} from 'react';
 
 
 function GalleryList({gallery, setGalleryList}) {
