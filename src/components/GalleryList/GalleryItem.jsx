@@ -26,6 +26,8 @@ function GalleryItem({photo, getGalleryList}) {
     console.log(photo.id)
     axios.put(`/gallery/like/${photo.id}`).then((response) => {
       console.log(`Sanity check`,response);
+      //* This fixed the live updating issue. getGalleryList
+      getGalleryList();
     }).catch((error) => {
       console.log(`Error in PUT ${error}`);
       alert(`Something went wrong`)
