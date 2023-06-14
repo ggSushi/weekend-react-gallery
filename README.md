@@ -1,9 +1,28 @@
-# Project Name
+# **Gallery of Things**
+---
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+### **_React Gallery_**
+This app shows a gallery of photos of things that I enjoy with a button below each one to click if anyone loves the photo. It shows how many likes a photo has on it as well.
 
-## Description
+---
 
-Your project description goes here. What problem did you solve? How did you solve it?
+### **_Setup_**
+Running the server code requires `nodemon`. If you don't already have `nodemon`, install it globally with `npm install nodemon --global`.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+```
+npm install
+npm run server
+```
+
+Now that the server is running, open a new terminal tab with `cmd + t` and start the react client app.
+
+```
+npm run client
+```
+
+---
+### **_Technologies Used:_**
+- JavaScript, HTML, CSS
+- React
+- NodeJS, ExpressJS
+- Axios
